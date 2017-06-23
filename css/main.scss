@@ -4,6 +4,10 @@
 @import "settings";
 @import "foundation";
 
+.container {
+	min-height: 500px;
+}
+
 .top-bar {
 	margin-top: 10px;
 }
@@ -38,17 +42,33 @@
     max-width: 30rem;
 }
 
-.blog {
+.page-content {
     margin-top: 1.5rem;
     margin-bottom: 4.5rem;
 }
 
-.blog_title {
+.blog-title {
     margin-bottom: 1.5rem;
+}
+
+.section-title {
+    margin-bottom: 4.5rem;
 }
 
 .my-icon {
 	color: $primary-color;
+}
+
+.faded {
+    opacity: .6;
+}
+
+.sc {
+    text-transform: uppercase;
+    font-family: "Input Mono";
+    font-weight: 700;
+    font-size: .83333em;
+    letter-spacing: .05em;
 }
 
 p > img {

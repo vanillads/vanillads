@@ -1,0 +1,20 @@
+
+<div class="row">
+  <h1 class="columns small-8 title">{{ post.title }}</h1>
+</div>
+<section class="row page-content">
+  <div class="columns">
+    {{ content }}
+    <nav class="post-nav module">
+      <ul>
+        {% if post.previous.url %}
+          <li><a id="prev" href="{{post.previous.url}}" class="sc faded">Préc: {{post.previous.title}}</a></li>
+        {% endif %}
+        {% if post.next.url %}
+          <li><a id="next" href="{{post.next.url}}" class="sc faded">Suiv: {{post.next.title}}</a></li>
+        {% endif %}
+        <li><a href="/archive/" class="sc faded">Archive</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>

@@ -6,8 +6,15 @@
   <body>
 		{% include header.html %}
 
-		{{ content }}
+		<div class="row container">
+			<div class="large-12 columns">
 
+				{{ content }}
+
+			</div>
+		</div>
+
+    {% include recentposts.html %}
 	  {% include footer.html %}
 
   </body>
