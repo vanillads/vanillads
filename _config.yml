@@ -26,9 +26,31 @@ github_username:  sanimation
 markdown: kramdown
 plugins:
   - jekyll-feed
-  
+
 sass:
   sass_dir: _sass
+
+collections:
+  my_categories:
+    output: true
+    permalink: /substancevstyle/category/:name/
+  my_tags:
+    output: true
+    permalink: /substancevstyle/tag/:name/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_categories
+    values:
+      layout: blog_by_category
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: blog_by_tag
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

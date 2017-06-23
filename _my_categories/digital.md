@@ -1,0 +1,4 @@
+---
+slug: digital
+name: Digital
+---

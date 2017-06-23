@@ -3,6 +3,8 @@ layout: post
 title:  "Gingerbread!"
 date:   2017-06-21
 permalink: /substancevstyle/gingerbread/
+categories: digital
+tags: style
 ---
 
 Marzipan gingerbread icing wafer halvah macaroon lemon drops. Powder soufflé powder muffin marzipan soufflé. Pudding bonbon jelly-o. Cotton candy halvah cupcake pie powder tootsie roll apple pie. Pie halvah powder halvah cookie. Tootsie roll pastry liquorice. Muffin gingerbread halvah. Marshmallow tiramisu marzipan danish. Candy macaroon sweet bonbon. Chocolate bar muffin candy canes macaroon sesame snaps brownie. Cake marshmallow pastry pudding candy canes fruitcake. Cake topping gingerbread jelly caramels lemon drops. Oat cake gummies apple pie halvah. Jelly jelly beans soufflé biscuit candy canes icing.
