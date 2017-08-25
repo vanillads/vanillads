@@ -16,27 +16,39 @@
 title: Vanilla Digital Studio
 email: sandrine.zecler@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Laboratoire d'idées.
+  Mon laboratoire d'idées.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: szecler
-github_username:  sanimation
+github_username:  vanillads
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-assets
+  - jekyll-sitemap
 
-sass:
-  sass_dir: _sass
+assets:
+  sources:
+    - bower_components/foundation-sites/scss
+    - _assets/css
+    - bower_components/foundation-sites/dist/js
+    - bower_components/jquery/dist
+    - bower_components/what-input/dist
+  autoprefixer:
+    browsers:
+      - "last 2 versions"
+      - "IE >= 9"
+      - "and_chr >= 2.3"
 
 collections:
   my_categories:
     output: true
-    permalink: /substancevstyle/category/:name/
+    permalink: /substancevstyle/categories/:name/
   my_tags:
     output: true
-    permalink: /substancevstyle/tag/:name/
+    permalink: /substancevstyle/tags/:name/
 
 defaults:
   -

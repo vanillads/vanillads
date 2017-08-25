@@ -1,0 +1,20 @@
+{
+  "name": "vanillads.github.io",
+  "homepage": "https://github.com/vanillads/vanillads.github.io",
+  "authors": [
+    "sanimation <sandrine.zecler@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.4.3"
+  }
+}

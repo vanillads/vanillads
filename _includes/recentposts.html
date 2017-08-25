@@ -3,14 +3,16 @@
   <div class="large-12 columns">
     <hr>
     <h4 class="section-title">Articles récents</h4>
-    {% for post in site.posts limit:3 %}
-      <div class="medium-4 columns">
-        <h3><a href="{{ post.url }}" class="fade underline">{{ post.title }}</a></h3>
-        {{ post.excerpt }}
-        <div class="read-more">
-          <a href="{{ post.url }}" class="sc faded">En savoir plus</a>
+    <div class="row">
+      {% for post in site.posts limit:3 %}
+        <div class="medium-4 columns">
+          <h3><a href="{{ post.url }}" class="fade underline">{{ post.title }}</a></h3>
+          {{ post.excerpt }}
+          <div class="read-more">
+            <a href="{{ post.url }}" class="sc faded">En savoir plus</a>
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </div>

@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="columns small-8 title">
+    <h1>{{ post.title }}</h1>
+    <time datetime="{{ post.date }}">{{post.date | date: "%b %d, %y"}}</time>
+    {% for tag in post.tags %}
+      <div><a href="/substancevstyle/tags/{{ tag }}">#{{tag}}</a></div>
+    {% endfor %}
+  </div>
+</div>

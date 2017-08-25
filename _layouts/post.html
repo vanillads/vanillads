@@ -8,23 +8,12 @@
 
 		<div class="row container">
 			<div class="large-12 columns">
-        <div class="row">
-          <h1 class="columns small-8 title">{{ page.title }}</h1>
-        </div>
+        {% assign post = page %}
+        {% include post_meta.html %}
 
 				{{ content }}
 
-        <nav class="post-nav module">
-          <ul>
-            {% if page.previous.url %}
-              <li><a id="prev" href="{{page.previous.url}}" class="sc faded">Préc: {{page.previous.title}}</a></li>
-            {% endif %}
-            {% if page.next.url %}
-              <li><a id="next" href="{{page.next.url}}" class="sc faded">Suiv: {{page.next.title}}</a></li>
-            {% endif %}
-            <li><a href="/archive/" class="sc faded">Archive</a></li>
-          </ul>
-        </nav>
+        {% include post_footer.html %}
 			</div>
 		</div>
 

@@ -1,24 +1,25 @@
 <div class="row header">
-    <div class="large-12 columns">
-		<nav class="top-bar" data-topbar role="navigation">
-			<ul class="title-area">
-				<li class="name">
-					<h1><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/logo.png" alt="" /> {{site.title}}</a></h1>
-				</li>
-				<!--div class="logo">
-					<a href="{{ site.baseurl }}/"><img src="http://placehold.it/100x45/DF4949/FFFFFF?text=[logo]" alt="logo" /></a>
-				</div-->
-				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-				<li class="toggle-topbar menu-icon"><a href="{{ site.baseurl }}/"><span>Menu</span></a></li>
-			</ul>
-			<div class="top-bar-section">
-				<!-- Right Nav Section -->
-				<ul class="right">
-				  <li><a href="{{ site.baseurl }}/make/">Aventures</a></li>
+  <div class="large-12 columns">
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+
+    <div class="top-bar" id="main-menu">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">
+            <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/logo.png" alt="" /> {{site.title}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu items">
+          <li><a href="{{ site.baseurl }}/make/">Aventures</a></li>
           <li><a href="{{ site.baseurl }}/about/">A propos</a></li>
           <li><a href="{{ site.baseurl }}/substancevstyle/">Substance v. style</a></li>
-				</ul>
-			</div>
-		</nav>
+        </ul>
+      </div>
+    </div>
 	</div>
 </div>
