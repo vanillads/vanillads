@@ -10,6 +10,10 @@ $open-sans: 'Open Sans', sans-serif;
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+.container {
+   min-height: 500px;
+ }
+
 .header {
   margin-top: 2.85rem;
   margin-bottom: 6rem;
