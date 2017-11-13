@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  {% include head.html %}
+<article class="post">
 
-  <body>
-		{% include header.html %}
+  <header class="post-header">
+    <h1>{{ page.title | escape }}</h1>
+  </header>
 
-		<div class="row container">
-			<div class="large-12 columns">
-        <div class="row">
-          <h1 class="columns small-8 title">{{ page.title }}</h1>
-        </div>
-				{{ content }}
-			</div>
-		</div>
+  <div class="post-content">
+    {{ content }}
+  </div>
 
-	  {% include footer.html %}
-
-  </body>
-
-</html>
+</article>

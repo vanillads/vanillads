@@ -21,6 +21,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: szecler
 github_username:  vanillads
+# Mailing list signup form
+signup_form_url: http://eepurl.com/c2rTVz
 
 # Build settings
 markdown: kramdown
@@ -28,6 +30,8 @@ plugins:
   - jekyll-feed
   - jekyll-assets
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate-v2
 
 assets:
   sources:
@@ -45,10 +49,10 @@ assets:
 collections:
   my_categories:
     output: true
-    permalink: /substancevstyle/categories/:name/
+    permalink: /collections/:name/
   my_tags:
     output: true
-    permalink: /substancevstyle/tags/:name/
+    permalink: /tags/:name/
 
 defaults:
   -
@@ -63,6 +67,28 @@ defaults:
       type: my_tags
     values:
       layout: blog_by_tag
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /:title/
+
+# Due to us using the categories for posts then it is advisable to explicitly specify a
+# permalink structure for the site. Otherwise Jekyll attempts to organize the pages in folders
+# by the category names and it doesn't understand multi-categories to well :/
+permalink: none
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

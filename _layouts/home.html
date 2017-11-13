@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="container">
+      <div class="row">
+        <div class="large-12 columns">
+          <section>
+            {{ content }}
+          </section>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div id="post-list">
+            <!-- Posts list -->
+            <section class="row small-up-2 medium-up-3">
+              {% for post in paginator.posts %}
+                <div class="column">
+                  <article>
+                    <div class="card">
+                      {% if post.img %}
+                        <a href="{{ post.url | relative_url }}">
+                          {% img {{post.img}} alt:{{post.alt}} class:'post-img' %}
+                        </a>
+                      {% endif %}
+                      <div class="card-section">
+                        {% include post_meta.html %}
+                        <h1 class="post-title">
+                          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                        </h1>
+                        {{ post.excerpt }}
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              {% endfor %}
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <!--
+            Showing buttons to move to the next and to the previous list of posts (pager buttons).
+          -->
+          {% if paginator.total_pages > 1 %}
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              {% if paginator.previous_page %}
+                <li class="pagination-previous">
+                  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Previous page">Articles récents</a>
+                </li>
+              {% endif %}
+              {% if paginator.next_page %}
+                <li class="pagination-next">
+                  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Next page">Anciens Articles</a>
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

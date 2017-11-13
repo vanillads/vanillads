@@ -1,0 +1,16 @@
+---
+layout: page
+---
+
+<section class="row page-content">
+  <div class="columns">
+    {% for tag in site.tags %}
+      <h2 class="tag_title">{{ tag[0] }}</h2>
+      {% for post in tag[1] %}
+        <a href="{{ post.url | relative_url }}">
+          <h3 class="post-title">{{ post.title }}</h3>
+        </a>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
