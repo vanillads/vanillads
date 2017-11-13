@@ -11,88 +11,125 @@ $open-sans: 'Open Sans', sans-serif;
 @import "font-awesome";
 
 .container {
-   min-height: 500px;
- }
-
-.header {
-  margin-top: 2.85rem;
-  margin-bottom: 6rem;
+	min-height: 500px;
 }
 
-.title, .post__hero {
-  margin-bottom: 6rem;
+.site-header {
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: $global-margin;
 }
-
-$topbar-link-color: black;
 
 .top-bar a {
-  color: $topbar-link-color;
+  color: $softblack;
+}
+
+.menu .site-title {
+  padding: 0.7rem 1rem 0.7rem 0rem !important;
+}
+
+.menu .menu-text {
+  padding: 0rem 1rem 0rem 0rem !important;
+}
+
+.site-title {
+  font-weight: $global-weight-bold;
+  color: $softblack;
   &:hover {
-    color:$anchor-color-hover;
+    color: $softblack;
   }
 }
 
-.items {
-  text-transform: uppercase;
+.search {
+  margin-top: $global-margin;
 }
 
-.page-content {
-    margin-top: 1.5rem;
-    margin-bottom: 4.5rem;
+.blog-post {
+  margin-top: $global-margin * 0.5;
 }
 
-.blog-title {
-    margin-bottom: 1.5rem;
+.post-meta, .post-meta a:link, .post-meta a:visited {
+  color: $dark-gray;
 }
 
-.top-bar {
-	margin-top: 10px;
+.post-meta .dot {
+  vertical-align: middle;
+  font-size: 4px;
+  padding: 0 0.25rem 0 0.25rem;
 }
 
-.content {
-	padding-top: 50px;
+.post-title {
+  font-size: 20px;
+  a:link, a:visited {
+    color: $softblack;
+  }
 }
 
-.solution {
-	background-color: $primary-color;
-	color: $white;
-	height: 250px;
+.post-img {
+  border-radius: $global-radius;
 }
 
-.baseline {
-	padding-top: 50px;
-	font-size: 72px;
-    line-height: 1;
+#post-list img {
+	height: 253px !important;
+  object-fit: cover;
 }
 
-.newsletter {
-    margin-bottom: 4.5rem;
-    max-width: 30rem;
+.category_title {
+  text-transform: capitalize;
 }
 
-.section-title {
-    margin-bottom: 4.5rem;
+.pagination {
+  text-align: center;
 }
 
-.my-icon {
-	color: $primary-color;
+.post-content, .post-header {
+  margin-bottom: $global-margin;
 }
 
-.faded {
-    opacity: .6;
+.full-post-img {
+	margin-bottom: $global-margin * 0.5;
 }
 
-.sc {
-    text-transform: uppercase;
-    font-family: "Input Mono";
-    font-weight: 700;
-    font-size: .83333em;
-    letter-spacing: .05em;
+.post-footer {
+  list-style: none;
+	margin: 0;
+  padding: 0;
+	font-weight: $global-weight-bold;
 }
 
-p > img {
-	padding-top: 50px;
-	padding-bottom: 50px;
+.recent-posts {
+  border-top: 1px solid $light-gray;
+  padding-top: $global-padding * 0.5;
+  margin-top: $global-margin;
+  margin-bottom: $global-margin;
+}
+
+.blog-footer {
+
+  .footer-heading {
+    font-size: $lead-font-size;
+  }
+
+  border-top: 1px solid $light-gray;
+  padding: $global-padding;
+  text-align: center;
+
+  p {
+    color: $dark-gray;
+    margin: 0;
+  }
+
+  i {
+    margin: 0.5rem;
+  }
+
+  h2 {
+    color: $dark-gray!important;
+  }
+
+  a {
+    color: $dark-gray!important;
+  }
+
 }
 
 @include foundation-global-styles;

@@ -1,25 +1,38 @@
-<div class="row header">
-  <div class="large-12 columns">
-    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle="main-menu"></button>
-      <div class="title-bar-title">Menu</div>
-    </div>
+<header class="site-header" role="banner">
+  <div class="row">
+    <div class="large-12 columns">
+      <nav>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
 
-    <div class="top-bar" id="main-menu">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text">
-            <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/logo.png" alt="" /> {{site.title}}</a>
-          </li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu items">
-          <li><a href="{{ site.baseurl }}/make/">Aventures</a></li>
-          <li><a href="{{ site.baseurl }}/about/">A propos</a></li>
-          <li><a href="{{ site.baseurl }}/substancevstyle/">Substance v. style</a></li>
-        </ul>
-      </div>
+        <div class="top-bar" id="main-menu">
+          <div class="top-bar-left">
+              <ul class="vertical medium-horizontal menu">
+                <li class="menu-text">
+                  <a href="{{ "/" | relative_url }}" class="site-title">{{ site.title | escape }}</a>
+                </li>
+                <li><a href="{{ "/about" | relative_url }}">A propos</a></li>
+                <li><a href="{{ "/collections" | relative_url }}">Categories</a></li>
+                <li><a href="{{ "/tags" | relative_url }}">Tags</a></li>
+                <li><a href="{{ "/archive" | relative_url }}">Archive</a></li>
+              </ul>
+          </div>
+          <div class="top-bar-right">
+            <ul class="vertical medium-horizontal menu">
+              <li>
+                <a href="{{ "/search" | relative_url }}">
+                  <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                </a>
+              </li>
+              {% if site.signup_form_url %}
+                <li><a href="{{site.signup_form_url}}">Subscribe</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-	</div>
-</div>
+  </div>
+</header>

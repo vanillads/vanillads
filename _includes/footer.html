@@ -1,16 +1,22 @@
-<footer class="row" >
-	<div class="large-12 columns">
-		<hr>
-		<div class="newsletter">
-    </div>
-		<ul class="no-bullet">
-		  <li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
-		  <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
-		</ul>
-		{{site.title}} &copy; 2017
-	</div>
+<footer class="blog-footer">
+  <div class="row medium-8 large-7 columns align-center">
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    {% if site.github_username %}
+      <a href="https://github.com/{{ site.github_username }}">
+        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+    {% if site.twitter_username %}
+      <a href="https://twitter.com/{{ site.twitter_username }}">
+        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+    <p><small>© 2017 Vanilla</small></p>
+  </div>
 </footer>
 {% js jquery.js %}
 {% js what-input %}
 {% js foundation.min %}
 {% js main %}
+{% js lunr %}
+{% js search %}
