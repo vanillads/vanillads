@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strawberry breakfast
-categories: breakfast meal
+categories: ['app and data']
 tags: style
 img: sambazon-63913.jpg
 alt: Strawberry breakfast

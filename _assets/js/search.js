@@ -15,7 +15,7 @@
 
       searchResults.innerHTML = appendString;
     } else {
-      searchResults.innerHTML = '<p>No results matched your search terms</p>';
+      searchResults.innerHTML = '<p>Votre recherche n&#146;a donné aucun résultat.</p>';
     }
   }
 
