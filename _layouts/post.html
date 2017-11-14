@@ -9,6 +9,12 @@ layout: default
     {% include post_meta.html %}
   </header>
 
+  <div class="post-excerpt">
+    {% if page.excerpt %}
+      {{ page.excerpt }}
+    {% endif %}
+  </div>
+
   <div class="full-post-img">
     {% if page.img %}
       {% img {{page.img}} alt:{{page.alt}} %}
@@ -33,9 +39,10 @@ layout: default
     </nav>
   </footer>
 
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
 </article>
 
   {% include recent_posts.html %}
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}

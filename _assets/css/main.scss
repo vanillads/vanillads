@@ -10,6 +10,9 @@ $open-sans: 'Open Sans', sans-serif;
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+$xsmall-font-size: 20%;
+$post-font-size: $global-font-size * 1.25;
+
 .container {
 	min-height: 500px;
 }
@@ -43,6 +46,10 @@ $open-sans: 'Open Sans', sans-serif;
   margin-top: $global-margin;
 }
 
+.category_title {
+  text-transform: capitalize;
+}
+
 .blog-post {
   margin-top: $global-margin * 0.5;
 	margin-bottom: $global-margin;
@@ -54,15 +61,21 @@ $open-sans: 'Open Sans', sans-serif;
 
 .post-meta .dot {
   vertical-align: middle;
-  font-size: 4px;
+  font-size: $xsmall-font-size;
   padding: 0 0.25rem 0 0.25rem;
 }
 
 .post-title {
-  font-size: 20px;
+  font-size: $lead-font-size;
   a:link, a:visited {
     color: $softblack;
   }
+}
+
+.post-excerpt {
+  font-size: $lead-font-size;
+  margin-bottom: $global-margin * 0.5;
+  line-height: 1.2;
 }
 
 .post-img {
@@ -74,16 +87,16 @@ $open-sans: 'Open Sans', sans-serif;
   object-fit: cover;
 }
 
-.category_title {
-  text-transform: capitalize;
-}
-
 .pagination {
   text-align: center;
 }
 
 .post-content, .post-header {
   margin-bottom: $global-margin;
+
+	p {
+		font-size: $post-font-size;
+	}
 }
 
 .full-post-img {
@@ -107,7 +120,7 @@ $open-sans: 'Open Sans', sans-serif;
 .blog-footer {
 
   .footer-heading {
-    font-size: $lead-font-size;
+    font-size: $post-font-size;
   }
 
   border-top: 1px solid $light-gray;
